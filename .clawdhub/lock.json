@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "clawdbot-documentation-expert": {
+      "version": "1.0.0",
+      "installedAt": 1769866959326
+    },
+    "clawdbot-skill-clawdbot-workspace-template-review": {
+      "version": "0.1.0",
+      "installedAt": 1769866964484
+    },
+    "clawddocs": {
+      "version": "1.2.2",
+      "installedAt": 1769866970443
+    },
+    "triple-memory": {
+      "version": "1.0.0",
+      "installedAt": 1769868183700
+    },
+    "self-reflection": {
+      "version": "1.1.1",
+      "installedAt": 1769868191098
+    },
+    "openai-tts": {
+      "version": "1.0.0",
+      "installedAt": 1769868573635
+    }
+  }
+}
