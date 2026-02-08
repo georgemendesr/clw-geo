@@ -4,8 +4,9 @@
 API REST para gerenciar a vida pessoal do George.
 
 ### Quando usar
-- Por padrão, SEMPRE use o Dashboard GEO
+- **Por padrão, SEMPRE use o Dashboard GEO**
 - Projetos, ideias, lembretes, calendário, finanças pessoais
+- **NUNCA use cron do sistema** para lembretes. Use `/api/reminders`.
 
 ### Base URL
 http://127.0.0.1:3003/api
@@ -14,9 +15,9 @@ http://127.0.0.1:3003/api
 Token JWT permanente em HEARTBEAT.md
 
 ### Endpoints
-- GET/POST /api/reminders - Lembretes
-- GET/POST /api/calendar - Calendário
-- GET/POST /api/jobs - Projetos
+- GET/POST /api/reminders - Lembretes (Use este para TUDO que for "lembrar", "avisar")
+- GET/POST /api/calendar - Calendário (Compromissos com hora marcada)
+- GET/POST /api/jobs - Projetos (Listas de tarefas)
 - GET/POST /api/ideas - Ideias
 - GET/POST /api/transactions - Finanças pessoais
 

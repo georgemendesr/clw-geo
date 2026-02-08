@@ -69,3 +69,12 @@ Campos: titulo, valor, categoria, dia_vencimento
 
 ### Contexto Assistente
 GET /api/assistente/contexto - Memoria, stats, historico
+
+---
+
+## 🤖 Proatividade
+
+### Verificar pendências financeiras
+\\ash
+./scripts/check.sh
+\\nRetorna JSON com contas atrasadas e transações sem categoria.

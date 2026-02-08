@@ -173,3 +173,12 @@ PUT /api/jobs/items/:id
 ```
 
 **Status tarefas:** pendente, em_andamento, concluido
+
+---
+
+## 🤖 Proatividade
+
+### Verificar tudo
+\\ash
+./scripts/check.sh
+\\nRetorna JSON com lembretes ativos e agenda do dia.
