@@ -26,6 +26,6 @@ Para gerar novo token:
 
 ## WhatsApp do George
 
-**Número:** 558699689881
+**Número:** +5586999689881
 
 Para enviar mensagem proativa, use o comando message do clawdbot.

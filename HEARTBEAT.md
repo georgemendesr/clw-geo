@@ -49,6 +49,7 @@ JSON com `reminders`, `calendar`, `upcoming`. Campos técnicos tipo `status`, `r
 - "Não consegui rodar ./scripts/check.sh" ❌ (problema técnico interno)
 - Mandar a mesma mensagem repetida em heartbeats seguidos ❌
 - "Marcar como concluído ou re-agendar?" ❌ (formal demais)
+- Oferecer menu numerado (1/2/3) no heartbeat ❌
 
 ### CERTO no heartbeat:
 - "Tiro da lista?" / "Concluo?" / "Reagendo?" ✅ (curto)
