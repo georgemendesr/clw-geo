@@ -21,6 +21,11 @@ Fatos duráveis, preferências e contexto persistente.
 - **Sistema financeiro R10:** http://127.0.0.1:3004 (Fluxo R10)
 - **R10 Flash:** http://173.212.236.244 porta 4502
 
+## Família do George
+
+- **Esposa:** Micaela
+- **Filha:** Milena (2 anos)
+
 ## Projetos Ativos
 
 - **Paralel4s** - Banda/projeto musical. Setlist de 22 faixas (5 blocos) para show "Pôr do sol". Projeto no Dashboard (id:4)
