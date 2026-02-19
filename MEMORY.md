@@ -4,6 +4,7 @@ Fatos duráveis, preferências e contexto persistente.
 
 ## Preferências do George
 
+- Pronúncia: nome "George" deve ser falado como "Geórge"; "GEO" como "Géo".
 - Comunicação direta e objetiva, sem enrolação
 - Horário ativo: 07:00 às 23:00 (America/Fortaleza)
 - Idioma: Português brasileiro
