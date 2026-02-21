@@ -1,8 +1,1 @@
-{
-  "lastChecks": {
-    "geoDashboard": null,
-    "fluxoR10": null
-  },
-  "lastNotified": {},
-  "notes": "Tracking de últimas checagens e notificações enviadas para evitar repetição"
-}
+{"lastChecks": {"geoDashboard": "2026-02-20T13:06:53-03:00", "fluxoR10": null}, "lastNotified": {"equatorial": "2026-02-20T06:00:00-03:00"}, "notes": "Tracking de últimas checagens e notificações enviadas para evitar repetição"}
