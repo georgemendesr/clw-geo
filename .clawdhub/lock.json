@@ -24,6 +24,10 @@
     "openai-tts": {
       "version": "1.0.0",
       "installedAt": 1769868573635
+    },
+    "youtube-transcript": {
+      "version": "1.0.1",
+      "installedAt": 1771863725642
     }
   }
 }
