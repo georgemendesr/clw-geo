@@ -28,6 +28,14 @@
     "youtube-transcript": {
       "version": "1.0.1",
       "installedAt": 1771863725642
+    },
+    "playwright-scraper-skill": {
+      "version": "1.2.0",
+      "installedAt": 1772076916830
+    },
+    "deep-scraper": {
+      "version": "1.0.1",
+      "installedAt": 1772076946087
     }
   }
 }
