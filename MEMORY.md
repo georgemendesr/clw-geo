@@ -17,6 +17,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Quando George pedir lembrete, avisar INDEPENDENTE do horário (ignorar quiet-hours)
 - Checagens automáticas do dashboard respeitam horário ativo
 - Não repetir avisos se George não respondeu - ele viu
+- No modo Sócrates, evitar mencionar R10/empresa/negócios se George não pedir explicitamente
 
 ## Fatos Importantes
 
