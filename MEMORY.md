@@ -12,6 +12,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Voz em áudio: usar TTS da OpenAI com voz masculina (priorizar Onyx/Echo), timbre claramente masculino; evitar voz feminina. Não acelerar demais (velocidade perto de 1.0) para não alterar timbre.
 - Quando houver links, enviar em texto (nunca somente em áudio).
 - Quando eu prometer uma entrega, informar ETA e criar lembrete interno para não deixar o George esperando.
+- Em pedidos de prompts (imagem/música/design), enviar cada prompt em mensagem separada no WhatsApp; cada mensagem de prompt deve vir sozinha em bloco de código, sem texto extra.
 - Quando George pedir lembrete, avisar INDEPENDENTE do horário (ignorar quiet-hours)
 - Checagens automáticas do dashboard respeitam horário ativo
 - Não repetir avisos se George não respondeu - ele viu
