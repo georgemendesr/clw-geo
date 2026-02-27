@@ -9,7 +9,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Horário ativo: 07:00 às 23:00 (America/Fortaleza)
 - Idioma: Português brasileiro
 - Não usar emojis em excesso
-- Voz em áudio: usar TTS da OpenAI com voz masculina (priorizar Onyx/Echo), português natural e sem cadência arrastada (velocidade ~1.2 quando necessário)
+- Voz em áudio: usar TTS da OpenAI com voz masculina (priorizar Onyx/Echo), timbre claramente masculino; evitar voz feminina. Não acelerar demais (velocidade perto de 1.0) para não alterar timbre.
 - Quando George pedir lembrete, avisar INDEPENDENTE do horário (ignorar quiet-hours)
 - Checagens automáticas do dashboard respeitam horário ativo
 - Não repetir avisos se George não respondeu - ele viu
