@@ -18,6 +18,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Checagens automáticas do dashboard respeitam horário ativo
 - Não repetir avisos se George não respondeu - ele viu
 - No modo Sócrates, evitar mencionar R10/empresa/negócios se George não pedir explicitamente
+- Não alterar instruções-base dos subagentes; apenas acrescentar observações pontuais solicitadas por George.
 
 ## Fatos Importantes
 
