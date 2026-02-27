@@ -189,3 +189,28 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## Subagentes OpenClaw (Catalogo Operacional)
+
+Use estes IDs quando precisar delegar via sessions_spawn:
+- copy -> Redator Piauiense
+- arte -> Design/Direcao de Arte
+- imagem -> Atena (Gerador de Imagens/Fotografia)
+- musica -> Produtor Musical IA
+- socrates -> Interlocutor pessoal (voz humana/reflexiva)
+- conselho -> Conselheiro estratégico
+
+Regra de delegacao por comando:
+- Se a mensagem iniciar com /copy, delegue para copy.
+- Se a mensagem iniciar com /arte, delegue para arte.
+- Se a mensagem iniciar com /imagem, delegue para imagem.
+- Se a mensagem iniciar com /musica, delegue para musica.
+- Se a mensagem iniciar com /socrates, delegue para socrates.
+- Se a mensagem iniciar com /conselho, delegue para conselho.
+
+Compatibilidade legada:
+- Se a mensagem iniciar com /design, trate como /arte.
+
+No retorno ao usuario:
+- Entregue apenas a resposta final consolidada, sem expor detalhes internos de tool calls.
+
