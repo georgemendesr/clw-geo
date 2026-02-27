@@ -10,6 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 3011;
 
 const YT_DLP_BIN = process.env.YT_DLP_BIN || '/root/.local/bin/yt-dlp';
+const FFMPEG_BIN = process.env.FFMPEG_BIN || 'ffmpeg';
+const NODE_BIN = process.env.NODE_BIN || '/usr/bin/node';
 
 const ALLOWED_HOSTS = [
   'youtube.com',
@@ -58,8 +60,9 @@ function buildArgs(url, format, tmpDir) {
     'after_move:filepath',
     '--paths',
     tmpDir,
+    '--no-js-runtimes',
     '--js-runtimes',
-    'node',
+    `node:${NODE_BIN}`,
   ];
 
   if (format === 'mp3') {
@@ -121,6 +124,34 @@ function runYtDlp(url, format, tmpDir) {
   });
 }
 
+function convertToMp3(inputPath) {
+  return new Promise((resolve, reject) => {
+    const mp3Path = path.join(
+      path.dirname(inputPath),
+      `${path.basename(inputPath, path.extname(inputPath))}.mp3`
+    );
+
+    const args = ['-y', '-i', inputPath, '-vn', '-codec:a', 'libmp3lame', '-q:a', '2', mp3Path];
+    const child = spawn(FFMPEG_BIN, args, { stdio: ['ignore', 'ignore', 'pipe'] });
+
+    let stderr = '';
+    child.stderr.on('data', (d) => {
+      stderr += d.toString();
+    });
+
+    child.on('error', (err) => {
+      reject(new Error(`Falha ao iniciar ffmpeg: ${err.message}`));
+    });
+
+    child.on('close', (code) => {
+      if (code !== 0 || !fs.existsSync(mp3Path)) {
+        return reject(new Error(stderr.trim() || 'Falha ao converter para MP3.'));
+      }
+      resolve(mp3Path);
+    });
+  });
+}
+
 async function safeCleanup(filePath) {
   try {
     const dir = path.dirname(filePath);
@@ -139,7 +170,18 @@ app.post('/api/download', async (req, res) => {
     }
 
     const tmpDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'media-dl-'));
-    const finalPath = await runYtDlp(validUrl, fmt, tmpDir);
+    let finalPath;
+
+    if (fmt === 'mp3') {
+      try {
+        finalPath = await runYtDlp(validUrl, 'mp3', tmpDir);
+      } catch {
+        const videoPath = await runYtDlp(validUrl, 'mp4', tmpDir);
+        finalPath = await convertToMp3(videoPath);
+      }
+    } else {
+      finalPath = await runYtDlp(validUrl, 'mp4', tmpDir);
+    }
 
     const ext = path.extname(finalPath) || `.${fmt}`;
     const base = path.basename(finalPath, path.extname(finalPath));
