@@ -10,6 +10,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Idioma: Português brasileiro
 - Não usar emojis em excesso
 - Voz em áudio: usar TTS da OpenAI com voz masculina (priorizar Onyx/Echo), timbre claramente masculino; evitar voz feminina. Não acelerar demais (velocidade perto de 1.0) para não alterar timbre.
+- Quando houver links, enviar em texto (nunca somente em áudio).
 - Quando George pedir lembrete, avisar INDEPENDENTE do horário (ignorar quiet-hours)
 - Checagens automáticas do dashboard respeitam horário ativo
 - Não repetir avisos se George não respondeu - ele viu
