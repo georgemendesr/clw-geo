@@ -32,6 +32,7 @@ Fatos duráveis, preferências e contexto persistente.
 - **Link curto do relatório R10 (Instagram):** https://r10.geolabs.com.br/r10-ig.html
 - **R10 Flash:** http://173.212.236.244 porta 4502
 - **Downloader mídia (YouTube/Instagram MP4/MP3):** http://173.249.57.88:3011
+- **Link web do conversor:** https://agente.geolabs.com.br/conversor/
 
 ## Família do George
 
