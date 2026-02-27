@@ -16,6 +16,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Para /imagem: seguir pacote padrão do subagente de imagem — conceito visual em texto + 2 a 4 opções. Cada opção deve ter título de 1 linha e um bloco único com prompt em inglês; o negative prompt vai junto no mesmo bloco de cada opção.
 - Quando George pedir lembrete, avisar INDEPENDENTE do horário (ignorar quiet-hours)
 - Checagens automáticas do dashboard respeitam horário ativo
+- Toda anotação enviada por chat deve ser registrada no Dashboard GEO como referência principal
 - Não repetir avisos se George não respondeu - ele viu
 - No modo Sócrates, evitar mencionar R10/empresa/negócios se George não pedir explicitamente
 - Não alterar instruções-base dos subagentes; apenas acrescentar observações pontuais solicitadas por George.
@@ -32,6 +33,7 @@ Fatos duráveis, preferências e contexto persistente.
 ## Família do George
 
 - **Esposa:** Micaela
+- **Aniversário da esposa (Micaela):** 04 de março
 - **Filha:** Milena (2 anos)
 
 ## Projetos Ativos
