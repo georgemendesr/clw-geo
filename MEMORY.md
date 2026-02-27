@@ -28,6 +28,8 @@ Fatos duráveis, preferências e contexto persistente.
 - **WhatsApp GEO (bot):** +5511972342811
 - **Dashboard pessoal:** http://127.0.0.1:3003 (GEO Dashboard)
 - **Sistema financeiro R10:** http://127.0.0.1:3004 (Fluxo R10)
+- **Domínio público do R10:** https://r10.geolabs.com.br
+- **Link curto do relatório R10 (Instagram):** https://r10.geolabs.com.br/r10-ig.html
 - **R10 Flash:** http://173.212.236.244 porta 4502
 - **Downloader mídia (YouTube/Instagram MP4/MP3):** http://173.249.57.88:3011
 
