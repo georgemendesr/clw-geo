@@ -23,6 +23,19 @@ Token JWT permanente em HEARTBEAT.md
 
 ---
 
+## Downloader de Mídia (YouTube/Instagram)
+Ferramenta web para baixar/converter links públicos para MP4 ou MP3.
+
+### URL
+- http://173.249.57.88:3011
+
+### Serviço
+- PM2 app: `media-downloader`
+- Código: `/root/media-dl-app`
+- Cópia versionada no workspace: `/root/clawd/tools/media-dl-app`
+
+---
+
 ## Fluxo R10 (Apenas quando solicitado)
 API REST para finanças da empresa R10 Piauí.
 

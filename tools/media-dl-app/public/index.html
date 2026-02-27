@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Downloader MP4/MP3</title>
+  <style>
+    body { font-family: Inter, Arial, sans-serif; margin: 0; background: #0b1220; color: #eaf0ff; }
+    .wrap { max-width: 680px; margin: 40px auto; padding: 0 16px; }
+    .card { background: #131d34; border: 1px solid #27365d; border-radius: 14px; padding: 20px; }
+    h1 { margin: 0 0 8px; font-size: 24px; }
+    p { color: #a9b8da; margin-top: 0; }
+    input, select, button { width: 100%; border-radius: 10px; border: 1px solid #2b3b64; background: #0f1730; color: #eef3ff; padding: 12px; font-size: 16px; box-sizing: border-box; }
+    .row { display: grid; grid-template-columns: 1fr 130px; gap: 10px; margin-top: 10px; }
+    button { background: #2f6bff; border: 0; cursor: pointer; font-weight: 600; }
+    button:disabled { opacity: .6; cursor: not-allowed; }
+    .msg { margin-top: 12px; font-size: 14px; color: #ffd18d; min-height: 20px; }
+    .ok { color: #53e6a7; }
+    .small { font-size: 12px; color: #8ea2cf; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Baixador + Conversor</h1>
+      <p>Cole um link do YouTube ou Instagram e escolha MP4 ou MP3.</p>
+
+      <input id="url" placeholder="https://..." />
+      <div class="row">
+        <select id="format">
+          <option value="mp4">MP4 (vídeo)</option>
+          <option value="mp3">MP3 (áudio)</option>
+        </select>
+        <button id="go">Baixar</button>
+      </div>
+
+      <div class="msg" id="msg"></div>
+      <div class="small">Obs.: funciona para conteúdos públicos.</div>
+    </div>
+  </div>
+
+  <script>
+    const $url = document.getElementById('url');
+    const $format = document.getElementById('format');
+    const $go = document.getElementById('go');
+    const $msg = document.getElementById('msg');
+
+    function setMsg(text, ok = false) {
+      $msg.textContent = text;
+      $msg.className = 'msg' + (ok ? ' ok' : '');
+    }
+
+    function filenameFromDisposition(v) {
+      if (!v) return null;
+      const m = /filename\*=UTF-8''([^;]+)|filename="?([^";]+)"?/i.exec(v);
+      const raw = decodeURIComponent((m && (m[1] || m[2])) || 'download');
+      return raw.replace(/[\r\n]/g, '').trim();
+    }
+
+    async function run() {
+      const url = $url.value.trim();
+      const format = $format.value;
+      if (!url) return setMsg('Cole um link primeiro.');
+
+      $go.disabled = true;
+      setMsg('Processando...');
+
+      try {
+        const res = await fetch('/api/download', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url, format })
+        });
+
+        if (!res.ok) {
+          const j = await res.json().catch(() => ({}));
+          throw new Error(j.error || 'Falha no download.');
+        }
+
+        const blob = await res.blob();
+        const name = filenameFromDisposition(res.headers.get('content-disposition')) || `arquivo.${format}`;
+
+        const a = document.createElement('a');
+        const obj = URL.createObjectURL(blob);
+        a.href = obj;
+        a.download = name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(obj);
+
+        setMsg('Download iniciado com sucesso.', true);
+      } catch (e) {
+        setMsg(e.message || 'Erro ao baixar.');
+      } finally {
+        $go.disabled = false;
+      }
+    }
+
+    $go.addEventListener('click', run);
+    $url.addEventListener('keydown', (e) => { if (e.key === 'Enter') run(); });
+  </script>
+</body>
+</html>

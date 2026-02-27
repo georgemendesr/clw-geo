@@ -29,6 +29,7 @@ Fatos duráveis, preferências e contexto persistente.
 - **Dashboard pessoal:** http://127.0.0.1:3003 (GEO Dashboard)
 - **Sistema financeiro R10:** http://127.0.0.1:3004 (Fluxo R10)
 - **R10 Flash:** http://173.212.236.244 porta 4502
+- **Downloader mídia (YouTube/Instagram MP4/MP3):** http://173.249.57.88:3011
 
 ## Família do George
 
