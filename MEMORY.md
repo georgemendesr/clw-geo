@@ -20,6 +20,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Não repetir avisos se George não respondeu - ele viu
 - No modo Sócrates, evitar mencionar R10/empresa/negócios se George não pedir explicitamente
 - Não alterar instruções-base dos subagentes; apenas acrescentar observações pontuais solicitadas por George.
+- Pasta de troca no Nextcloud deve se chamar **Geo** (não "gel").
 
 ## Fatos Importantes
 
