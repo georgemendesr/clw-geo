@@ -9,7 +9,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Horário ativo: 07:00 às 23:00 (America/Fortaleza)
 - Idioma: Português brasileiro
 - Não usar emojis em excesso
-- Voz padrão do GEO em áudio: OpenAI gpt-4o-mini-tts (voz ash), buscando pronúncia mais natural em português brasileiro
+- Voz em áudio: priorizar português brasileiro natural; evitar voz arrastada (quando necessário, usar velocidade acima de 1.15)
 - Quando George pedir lembrete, avisar INDEPENDENTE do horário (ignorar quiet-hours)
 - Checagens automáticas do dashboard respeitam horário ativo
 - Não repetir avisos se George não respondeu - ele viu
