@@ -13,6 +13,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Voz em áudio: usar TTS da OpenAI com voz masculina (priorizar Onyx/Echo), timbre claramente masculino; evitar voz feminina. Não acelerar demais (velocidade perto de 1.0) para não alterar timbre.
 - No WhatsApp, quando for resposta em áudio, enviar áudio real (arquivo/voice note). Evitar mandar marcação `[[tts:...]]` como texto, porque pode chegar cru para o George.
 - Quando houver links, enviar em texto (nunca somente em áudio).
+- Regra de formato: mesmo que o pedido venha em áudio, se a resposta tiver URL, código ou prompt copiável, responder em texto (não em áudio).
 - Quando eu prometer uma entrega, informar ETA e criar lembrete interno para não deixar o George esperando.
 - Em pedidos de prompts (imagem/música/design), enviar cada prompt em mensagem separada no WhatsApp, em texto limpo (sem prefixos de sistema, sem cabeçalhos técnicos, sem "✅ Subagent..." e sem menção a Markdown).
 - Para /imagem: seguir pacote padrão do subagente de imagem — conceito visual em texto + 2 a 4 opções. Cada opção deve ter título de 1 linha e um bloco único com prompt em inglês; o negative prompt vai junto no mesmo bloco de cada opção.
