@@ -14,6 +14,7 @@ Fatos duráveis, preferências e contexto persistente.
 - No WhatsApp, quando for resposta em áudio, enviar áudio real (arquivo/voice note). Evitar mandar marcação `[[tts:...]]` como texto, porque pode chegar cru para o George.
 - Quando houver links, enviar em texto (nunca somente em áudio).
 - Regra de formato: mesmo que o pedido venha em áudio, se a resposta tiver URL, código ou prompt copiável, responder em texto (não em áudio).
+- Preferência de canal de resposta: quando George pedir mensagem/prompt/texto para uso, entregar sempre em texto. Áudio só para conversa.
 - Quando eu prometer uma entrega, informar ETA e criar lembrete interno para não deixar o George esperando.
 - Em pedidos de prompts (imagem/música/design), enviar cada prompt em mensagem separada no WhatsApp, em texto limpo (sem prefixos de sistema, sem cabeçalhos técnicos, sem "✅ Subagent..." e sem menção a Markdown).
 - Para /imagem: seguir pacote padrão do subagente de imagem — conceito visual em texto + 2 a 4 opções. Cada opção deve ter título de 1 linha e um bloco único com prompt em inglês; o negative prompt vai junto no mesmo bloco de cada opção.
