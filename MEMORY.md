@@ -11,6 +11,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Idioma: Português brasileiro
 - Não usar emojis em excesso
 - Voz em áudio: usar TTS da OpenAI com voz masculina (priorizar Onyx/Echo), timbre claramente masculino; evitar voz feminina. Não acelerar demais (velocidade perto de 1.0) para não alterar timbre.
+- No WhatsApp, quando for resposta em áudio, enviar áudio real (arquivo/voice note). Evitar mandar marcação `[[tts:...]]` como texto, porque pode chegar cru para o George.
 - Quando houver links, enviar em texto (nunca somente em áudio).
 - Quando eu prometer uma entrega, informar ETA e criar lembrete interno para não deixar o George esperando.
 - Em pedidos de prompts (imagem/música/design), enviar cada prompt em mensagem separada no WhatsApp, em texto limpo (sem prefixos de sistema, sem cabeçalhos técnicos, sem "✅ Subagent..." e sem menção a Markdown).
@@ -59,6 +60,8 @@ Fatos duráveis, preferências e contexto persistente.
 - 2026-02-08: check.sh criado para proatividade do heartbeat
 - 2026-02-08: TTS corrigido (modelo: gpt-4o-mini-tts, voz: ash)
 - 2026-02-08: Memory flush habilitado para persistir memória antes de compaction
+- 2026-03-03: Skill `summarize` instalada e habilitada no OpenClaw para resumos/transcrição rápida
+- 2026-03-03: Web search configurada para Perplexity (sonar-pro) no ambiente atual
 
 ## Lições Aprendidas
 
@@ -66,6 +69,7 @@ Fatos duráveis, preferências e contexto persistente.
 - NUNCA despejar JSON cru nas mensagens pro George
 - check.sh fica em /root/clawd/scripts/check.sh (wrapper) e /root/clawd/skills/geo-dashboard/scripts/check.sh (real)
 - O workspace do agente é /root/clawd/ - paths relativos partem daí
+- YouTube no servidor cloud pode bloquear transcript por anti-bot (IP datacenter); plano robusto: saída residencial + cookies do navegador no yt-dlp + fallback Apify
 
 ---
 *Atualizar este arquivo quando aprender algo durável sobre o George ou tomar decisões significativas.*
