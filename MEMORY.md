@@ -16,7 +16,9 @@ Fatos duráveis, preferências e contexto persistente.
 - Regra de formato: mesmo que o pedido venha em áudio, se a resposta tiver URL, código ou prompt copiável, responder em texto (não em áudio).
 - Preferência de canal de resposta: quando George pedir mensagem/prompt/texto para uso, entregar sempre em texto. Áudio só para conversa.
 - Em pesquisa de passagens/preços, responder sempre em texto (não em áudio).
+- Para qualquer resposta com link e/ou preço, priorizar texto mesmo quando o pedido vier por áudio.
 - Em passagens, priorizar valores em reais (BRL); se vier em outra moeda, converter antes de enviar.
+- Não enviar preço como fechado sem validação no link final (tarifa pode variar no clique).
 - Quando eu prometer uma entrega, informar ETA e criar lembrete interno para não deixar o George esperando.
 - Em pedidos de prompts (imagem/música/design), enviar cada prompt em mensagem separada no WhatsApp, em texto limpo (sem prefixos de sistema, sem cabeçalhos técnicos, sem "✅ Subagent..." e sem menção a Markdown).
 - Para /imagem: seguir pacote padrão do subagente de imagem — conceito visual em texto + 2 a 4 opções. Cada opção deve ter título de 1 linha e um bloco único com prompt em inglês; o negative prompt vai junto no mesmo bloco de cada opção.
@@ -68,6 +70,8 @@ Fatos duráveis, preferências e contexto persistente.
 - 2026-02-08: Memory flush habilitado para persistir memória antes de compaction
 - 2026-03-03: Skill `summarize` instalada e habilitada no OpenClaw para resumos/transcrição rápida
 - 2026-03-03: Web search configurada para Perplexity (sonar-pro) no ambiente atual
+- 2026-03-05: Em cotações de viagem, resposta final deve sair em texto + BRL + link; evitar áudio e moeda estrangeira
+- 2026-03-05: Preço só é considerado válido após conferir no link final no momento do envio
 
 ## Lições Aprendidas
 
