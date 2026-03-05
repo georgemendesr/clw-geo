@@ -23,6 +23,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Toda anotação enviada por chat deve ser registrada no Dashboard GEO como referência principal
 - Não repetir avisos se George não respondeu - ele viu
 - George não quer lembretes de tarefas o tempo inteiro; avisar só quando for relevante/urgente ou quando ele pedir.
+- Em buscas complexas (ex.: passagens), George prefere receber a confirmação dos critérios por texto antes de iniciar a execução.
 - No modo Sócrates, evitar mencionar R10/empresa/negócios se George não pedir explicitamente
 - Não alterar instruções-base dos subagentes; apenas acrescentar observações pontuais solicitadas por George.
 - Pasta de troca no Nextcloud deve se chamar **Geo** (não "gel").
