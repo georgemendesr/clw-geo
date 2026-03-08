@@ -80,6 +80,8 @@ Fatos duráveis, preferências e contexto persistente.
 - check.sh fica em /root/clawd/scripts/check.sh (wrapper) e /root/clawd/skills/geo-dashboard/scripts/check.sh (real)
 - O workspace do agente é /root/clawd/ - paths relativos partem daí
 - YouTube no servidor cloud pode bloquear transcript por anti-bot (IP datacenter); plano robusto: saída residencial + cookies do navegador no yt-dlp + fallback Apify
+- No WhatsApp, `[[tts:...]]` em texto não vira áudio; para áudio real é obrigatório enviar mídia/voice note (retorno `MEDIA:` da ferramenta de TTS).
+- Quando houver “travamento” no WhatsApp, checar primeiro logs de conexão do provider (ex.: status 499, heartbeat restart e reconexões) antes de concluir falha de modelo/prompt.
 
 ---
 *Atualizar este arquivo quando aprender algo durável sobre o George ou tomar decisões significativas.*

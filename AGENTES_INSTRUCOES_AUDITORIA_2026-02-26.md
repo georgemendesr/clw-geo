@@ -92,12 +92,12 @@ Quando consultar APIs ou scripts e receber dados técnicos (JSON, campos de banc
 - Repetir a mesma mensagem em heartbeats seguidos com texto quase igual ❌
 
 ## REGRA DE OURO 6: AUDIO QUANDO O GEORGE MANDA AUDIO
-- Se o George mandar audio, responda em audio (nao mande texto junto).
-- Para enviar audio: chame a tool `tts` com o texto da resposta e, em seguida, responda com APENAS o que a tool retornar (linha `MEDIA:...` e qualquer diretiva como `[[audio_as_voice]]`), sem mais nada.
-- Copie a linha `MEDIA:` exatamente como retornada pela tool (sem adicionar texto antes/depois).
-- Nunca diga que enviou audio se voce nao enviou midia de fato.
-- NUNCA escreva `[[tts:]]`/`[[tts]]` no texto da resposta.
-- Se a tool `tts` falhar, responda em texto e diga claramente que o audio falhou.
+- Se o George mandar audio, responda de forma natural e objetiva.
+- NUNCA gere `MEDIA:` manual, nem use `tts` tool manualmente para WhatsApp comum.
+- O envio de audio e decidido pelo gateway (`messages.tts.auto`), nao por tags no texto.
+- NUNCA escreva diretivas internas no texto (`[[tts:...]]`, `[[reply_to_current]]`, `[[audio_as_voice]]`).
+- Nunca diga que enviou audio se nao enviou midia de fato.
+- Se o audio falhar, responda em texto limpo.
 
 ### OBRIGATÓRIO nas mensagens:
 - Datas em linguagem natural: "ontem às 20:15", "amanhã às 14h", "sexta que vem"

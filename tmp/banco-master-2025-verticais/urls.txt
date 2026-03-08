@@ -1,0 +1,8 @@
+01_escandalo_rombo_bancario.jpg|https://source.unsplash.com/1080x1920/?bank,crisis,fraud
+02_iphone_apreendido.jpg|https://source.unsplash.com/1080x1920/?iphone,smartphone,closeup
+03_forense_digital_cellebrite.jpg|https://source.unsplash.com/1080x1920/?digital,forensics,mobile,lab
+04_mensagens_audios_apagados.jpg|https://source.unsplash.com/1080x1920/?smartphone,chat,messages,data
+05_propina_espionagem_ameacas.jpg|https://source.unsplash.com/1080x1920/?corruption,investigation,secret
+06_forcas_seguranca_globais.jpg|https://source.unsplash.com/1080x1920/?police,technology,cybersecurity
+07_contexto_policial_brasil.jpg|https://source.unsplash.com/1080x1920/?brazil,police,investigation
+08_licencas_faturamento_global.jpg|https://source.unsplash.com/1080x1920/?finance,profit,analytics,chart
