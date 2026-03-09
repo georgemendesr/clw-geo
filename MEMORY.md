@@ -12,6 +12,7 @@ Fatos duráveis, preferências e contexto persistente.
 - Não usar emojis em excesso
 - Voz em áudio: usar TTS da OpenAI com voz masculina (priorizar Onyx/Echo), timbre claramente masculino; evitar voz feminina. Não acelerar demais (velocidade perto de 1.0) para não alterar timbre.
 - No WhatsApp, quando for resposta em áudio, enviar áudio real (arquivo/voice note). Evitar mandar marcação `[[tts:...]]` como texto, porque pode chegar cru para o George.
+- Regra reforçada em 2026-03-08: se George mandar áudio, responder por áudio sempre.
 - Quando houver links, enviar em texto (nunca somente em áudio).
 - Regra de formato: mesmo que o pedido venha em áudio, se a resposta tiver URL, código ou prompt copiável, responder em texto (não em áudio).
 - Preferência de canal de resposta: quando George pedir mensagem/prompt/texto para uso, entregar sempre em texto. Áudio só para conversa.
