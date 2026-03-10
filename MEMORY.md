@@ -26,12 +26,31 @@ Fatos duráveis, preferências e contexto persistente.
 - Quando George pedir lembrete, avisar INDEPENDENTE do horário (ignorar quiet-hours)
 - Checagens automáticas do dashboard respeitam horário ativo
 - Toda anotação enviada por chat deve ser registrada no Dashboard GEO como referência principal
+- O Geo Dashboard é a fonte central de verdade do George: lembretes, referências, anotações, calendário e financeiro devem ficar alinhados por lá por padrão.
 - Não repetir avisos se George não respondeu - ele viu
 - George não quer lembretes de tarefas o tempo inteiro; avisar só quando for relevante/urgente ou quando ele pedir.
+- George prefere lembretes em linguagem natural, como papo humano, e não como aviso seco. Ex.: em vez de “cortar o cabelo”, falar algo como “Já cortou o cabelo, George? Cabelo cortado é autocuidado.”
 - Em buscas complexas (ex.: passagens), George prefere receber a confirmação dos critérios por texto antes de iniciar a execução.
 - No modo Sócrates, evitar mencionar R10/empresa/negócios se George não pedir explicitamente
 - Não alterar instruções-base dos subagentes; apenas acrescentar observações pontuais solicitadas por George.
 - Pasta de troca no Nextcloud deve se chamar **Geo** (não "gel").
+- George sente a rotina atual como disfuncional: sem fim de semana, trabalhando manhã, tarde e noite, com pouco tempo para a filha. Em conversas sobre organização de vida, descanso e prioridades, tratar isso como tema sensível e prioritário.
+- George relata lidar com sedentarismo e também com um vício; temas de saúde, autocuidado e mudança de rotina devem ser tratados com seriedade e sem moralismo.
+- George revelou dependência de cocaína de longa data (cerca de 20 anos), em escalada, com dano nasal importante e terapia em andamento porém com adesão irregular. Em conversas sobre saúde, tratar isso como assunto prioritário, sensível e sem julgamento.
+- Código de discrição definido com George para tratar desse tema: usar a expressão **assunto cinza**. Quando ele mencionar isso, entender que está falando da dependência/uso e responder com discrição, sem explicitar o tema desnecessariamente.
+- Quando George trouxer o **assunto cinza**, entrar na chave do **Sócrates**: tom mais psicológico, reflexivo e humano, evitando abordagem técnica ou expositiva.
+- Insight importante do George sobre o assunto cinza: ele percebe o impulso hoje menos como busca de euforia/alívio emocional e mais como necessidade física/ritual incorporado ao corpo, quase automática.
+- Para lidar com o assunto cinza, George responde melhor a estratégias objetivas, concretas e visualizáveis do que a conselhos abstratos.
+- Quando fica sem o assunto cinza, George relata impaciência, irritação e perda de concentração a ponto de travar o trabalho; esse é um gatilho importante para intervenções curtas e objetivas.
+- No assunto cinza, George prefere mensagens bem curtas, práticas e visualizáveis; evitar textões e falar em passos simples.
+- George quer proatividade nesse tema: não esperar só ele puxar; fazer check-ins discretos sobre o assunto cinza em momentos oportunos.
+- George também quer alertas práticos e visualizáveis para alimentação ao longo do dia, com linguagem concreta sobre tempo sem comer/energia.
+- George quer lembrete diário e prático para fazer 10 minutos de bicicleta em casa, como passo simples contra o sedentarismo.
+- Para o lembrete diário da bicicleta, o horário mais apropriado para George é 17h.
+- Na rotina de saúde, George relata alimentação muito irregular, perde peso com facilidade e quer ganhar peso; abordagens práticas e simples funcionam melhor.
+- George tem uma bicicleta ergométrica em casa, vista por ele como recurso para sair do sedentarismo.
+- Trabalhar em casa e quase não sair fez George relaxar no autocuidado diário; ele percebe desleixo com banho, aparência e rotina básica. Em temas de rotina, propor micro-rituais simples e concretos antes de falar em mudanças grandes.
+- No escritório em casa, chinelo atrapalha George; para sinal de “modo trabalho”, faz mais sentido ficar descalço ou usar tênis do que chinelo.
 
 ## Fatos Importantes
 
@@ -83,6 +102,7 @@ Fatos duráveis, preferências e contexto persistente.
 - YouTube no servidor cloud pode bloquear transcript por anti-bot (IP datacenter); plano robusto: saída residencial + cookies do navegador no yt-dlp + fallback Apify
 - No WhatsApp, `[[tts:...]]` em texto não vira áudio; para áudio real é obrigatório enviar mídia/voice note (retorno `MEDIA:` da ferramenta de TTS).
 - Quando houver “travamento” no WhatsApp, checar primeiro logs de conexão do provider (ex.: status 499, heartbeat restart e reconexões) antes de concluir falha de modelo/prompt.
+- No Geo Dashboard, houve bug de timezone no endpoint `/api/calendar`: ele listava horários 3h adiantados ao usar `toISOString()`. Corrigido em 2026-03-10 para formatar em `America/Fortaleza`.
 
 ---
 *Atualizar este arquivo quando aprender algo durável sobre o George ou tomar decisões significativas.*

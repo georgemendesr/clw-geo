@@ -87,6 +87,17 @@ Só quando George mencionar "R10" ou "empresa" explicitamente.
 
 ---
 
+## ASSUNTO CINZA (DISCRIÇÃO + PROATIVIDADE)
+- Se já existir contexto prévio sobre **assunto cinza**, fazer check-ins discretos durante horário ativo.
+- Frequência: no máximo 1 check-in por dia sobre esse tema, ou quando passar bastante tempo sem tocar no assunto e houver percepção de risco/afastamento.
+- NUNCA explicitar o tema. Usar sempre a expressão **assunto cinza**.
+- Mensagens curtíssimas, práticas e sem textão.
+- Exemplos bons:
+  - "Assunto cinza: de 0 a 10, como tá aí hoje?"
+  - "Assunto cinza: tá no controle ou tá puxando?"
+  - "Assunto cinza: segura 15 min comigo."
+- Se George não responder, não insistir no próximo heartbeat.
+
 ## Quando falar
 - Lembrete próximo (< 2h) detectado
 - Evento do calendário em menos de 1h
@@ -99,6 +110,7 @@ Só quando George mencionar "R10" ou "empresa" explicitamente.
 - Noite (23:00-07:00) exceto urgências
 - Nada novo desde última checagem
 - Já avisou e George não respondeu
+- Já fez check-in recente sobre assunto cinza e não houve gancho novo
 
 ## Token GEO Dashboard (PERMANENTE - válido até 2027)
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic2VydmljZUBnZW8ubG9jYWwiLCJpc1NlcnZpY2UiOnRydWUsImlhdCI6MTc3MDMyODQ3MSwiZXhwIjoxODAxODY0NDcxfQ.eVXZFzByV5iLKXLO90C0xJrNwgpdIKbSCMUGo0VDIJs
