@@ -17,10 +17,14 @@ Fatos duráveis, preferências e contexto persistente.
 - Regra de formato: mesmo que o pedido venha em áudio, se a resposta tiver URL, código ou prompt copiável, responder em texto (não em áudio).
 - Preferência de canal de resposta: quando George pedir mensagem/prompt/texto para uso, entregar sempre em texto. Áudio só para conversa.
 - Em pesquisa de passagens/preços, responder sempre em texto (não em áudio).
+- Regra reforçada em 2026-03-10: qualquer listagem com preços, links, códigos, datas ou opções comparativas deve sair em texto, nunca em áudio, mesmo se o pedido vier por áudio.
+- Para automação de busca de passagens, George prefere API a scraping quando possível; se houver opção gratuita viável, priorizar a gratuita primeiro.
 - Para qualquer resposta com link e/ou preço, priorizar texto mesmo quando o pedido vier por áudio.
 - Em passagens, priorizar valores em reais (BRL); se vier em outra moeda, converter antes de enviar.
 - Não enviar preço como fechado sem validação no link final (tarifa pode variar no clique).
+- Em busca de passagens, se um resultado de API/teste divergir muito do mercado real ou do que George já encontrou, não apresentar como referência final; admitir baixa confiança e descartar o recorte.
 - Quando eu prometer uma entrega, informar ETA e criar lembrete interno para não deixar o George esperando.
+- Em entregas prometidas, nunca mandar para o George um lembrete interno disfarçado de atualização; se o prazo for falhar, avisar antes de estourar com ETA real, ou só falar quando já tiver resultado concreto.
 - Em pedidos de prompts (imagem/música/design), enviar cada prompt em mensagem separada no WhatsApp, em texto limpo (sem prefixos de sistema, sem cabeçalhos técnicos, sem "✅ Subagent..." e sem menção a Markdown).
 - Para /imagem: seguir pacote padrão do subagente de imagem — conceito visual em texto + 2 a 4 opções. Cada opção deve ter título de 1 linha e um bloco único com prompt em inglês; o negative prompt vai junto no mesmo bloco de cada opção.
 - Quando George pedir lembrete, avisar INDEPENDENTE do horário (ignorar quiet-hours)
@@ -103,6 +107,8 @@ Fatos duráveis, preferências e contexto persistente.
 - No WhatsApp, `[[tts:...]]` em texto não vira áudio; para áudio real é obrigatório enviar mídia/voice note (retorno `MEDIA:` da ferramenta de TTS).
 - Quando houver “travamento” no WhatsApp, checar primeiro logs de conexão do provider (ex.: status 499, heartbeat restart e reconexões) antes de concluir falha de modelo/prompt.
 - No Geo Dashboard, houve bug de timezone no endpoint `/api/calendar`: ele listava horários 3h adiantados ao usar `toISOString()`. Corrigido em 2026-03-10 para formatar em `America/Fortaleza`.
+- George é muito sensível a erro de horário: em qualquer mensagem sobre hora, compromisso ou referência temporal, usar sempre o horário local dele (`America/Fortaleza`) e evitar qualquer deriva de +1h/+3h.
+- Para skill/API de passagens, Travelpayouts funciona mais como plataforma de afiliado/monetização; para busca programática limpa, o Amadeus faz mais sentido como primeira tentativa.
 
 ---
 *Atualizar este arquivo quando aprender algo durável sobre o George ou tomar decisões significativas.*
